@@ -1,0 +1,163 @@
+@import "../../../styles/variables.scss";
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 290px;
+    padding: 10px 14px;
+    background-color: $sidebar-cor; /* Certifique-se de que esta variável esteja definida em variables.scss */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+
+    .sandwich {
+        transform: translateX(-5px);
+        transition: transform 0.3s ease;
+    }
+}
+
+.sidebar.close {
+    width: 88px;
+
+    .icon {
+        transform: translateX(-10px);
+        transition: transform 0.3s ease;
+    }
+
+    .sandwich {
+        transform: translateX(10px);
+    }
+
+    span {
+        display: none;
+    }
+
+    button {
+        width: 100%; /* Corrigido o tamanho do botão para ocupar a largura total */
+        height: 50px; /* Definindo uma altura fixa para o botão */
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo (ícone) horizontalmente */
+        align-items: center; /* Centraliza o conteúdo (ícone) verticalmente */
+        background-color: $sidebar-cor; /* Garantir que a cor do fundo seja a correta */
+        border: none; /* Remover borda */
+        border-radius: 6px;
+        transition: all 0.4s ease;
+        padding: 0; /* Remove o padding extra */
+    }
+}
+
+.sidebar .texto {
+    font-size: 16px;
+    font-weight: 500;
+    color: $cor-texto;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .texto {
+    opacity: 0;
+}
+
+.sidebar li {
+    height: 50px;
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    min-width: 60px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li .icon,
+.sidebar li .texto {
+    color: $cor-texto;
+    transition: color 0.2s ease;
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .imagem-texto img {
+    width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar header .imagem-texto {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .imagem-texto .header-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-texto .salao {
+    font-weight: 750;
+}
+
+.sandwich {
+    font-size: 40px;
+    color: $cor-primaria;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.4s ease;
+}
+
+.sidebar button {
+    width: 100%; /* Ajustado para ocupar a largura total do sidebar */
+    height: 50px; /* Definido tamanho fixo para o botão */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    border-radius: 6px;
+    transition: all 0.4s ease;
+    background-color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none; /* Remover borda */
+}
+
+.sidebar button .icon {
+    min-width: 60px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $cor-texto;
+    transition: color 0.2s ease;
+    position: relative;
+    left: 10px;
+}
+
+.sidebar li a:hover, .sidebar button:hover {
+    background: $cor-primaria;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .texto,
+.sidebar button:hover .icon,
+.sidebar button:hover .texto {
+    color: $sidebar-cor;
+}
