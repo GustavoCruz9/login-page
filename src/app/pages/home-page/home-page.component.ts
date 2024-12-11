@@ -69,13 +69,13 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   public sendEmail(e: SubmitEvent): void {
-    e.preventDefault(); // Impede o comportamento padrão do formulário
+    e.preventDefault(); 
 
     emailjs.sendForm(
-      'service_cv4z80m', // Seu Service ID
-      'template_qyd7d3h', // Seu Template ID
-      e.target as HTMLFormElement, // O próprio formulário
-      '5fuW9pL_ZMY0XKtOh' // Seu User ID
+      'service_cv4z80m', 
+      'template_qyd7d3h', 
+      e.target as HTMLFormElement, 
+      '5fuW9pL_ZMY0XKtOh'
     )
     .then(
       (response) => {

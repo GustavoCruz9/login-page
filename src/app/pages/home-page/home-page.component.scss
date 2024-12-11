@@ -193,7 +193,7 @@
   }
 
   .base {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -251,57 +251,5 @@
 
   .contato-info ul li {
     margin-bottom: 5px;
-  }
-
-  .contact {
-    margin: 40px 0;
-    text-align: center;
-    width: 30%;
-
-    h2 {
-      color: $heading-color;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: $cor-texto;
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid $cor-texto;
-        border-radius: 5px;
-        resize: none;
-      }
-
-      button {
-        padding: 10px;
-        width: 50%;
-        border: none;
-        background-color: $cor-primaria;
-        color: #fff;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-
-        transition: transform 0.3s ease, background-color 0.3s ease;
-
-        &:hover {
-          background-color: $hover-botao;
-          transform: translateY(-3px);
-        }
-      }
-    }
   }
 }

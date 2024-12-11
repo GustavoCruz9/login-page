@@ -56,7 +56,16 @@
             <strong>Endereço:</strong> Av. Principal, 123 - Bairro, Cidade,
             Estado
           </p>
-          <p><strong>Telefone:</strong> (11) 1234-5678</p>
+          <p>
+            <strong>Telefone:</strong> (11) 986057302 -
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=5511996457213&text&type=phone_number&app_absent=0"
+            >
+              <i class="bx bxs-phone icon"></i>
+              <span class="texto nav-texto">Entrar em Contato</span>
+            </a>
+          </p>
           <p><strong>Horário de Funcionamento:</strong></p>
           <ul>
             <li>Seg - Sex: 9:00 - 18:00</li>
@@ -81,34 +90,5 @@
         </div>
       </div>
     </div>
-
-    <section id="contact" class="contact">
-      <h2>Contato</h2>
-      <p>Ficou com alguma dúvida? Entre em contato conosco!</p>
-      <form #contactForm="ngForm" (submit)="sendEmail($event)">
-        <input
-          type="text"
-          name="name"
-          [(ngModel)]="name"
-          placeholder="Seu nome"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          [(ngModel)]="email"
-          placeholder="Seu e-mail"
-          required
-        />
-        <textarea
-          name="message"
-          [(ngModel)]="message"
-          placeholder="Sua mensagem"
-          rows="4"
-          required
-        ></textarea>
-        <button type="submit" [disabled]="!contactForm.valid">Enviar</button>
-      </form>
-    </section>
   </div>
 </div>
