@@ -63,8 +63,9 @@
   opacity: 1;
 }
 
-.sidebar.close .texto {
-  opacity: 0;
+.sidebar.close .texto,
+.sidebar.close .imagem-texto .header-texto {
+  display: none;
 }
 
 .sidebar li {
